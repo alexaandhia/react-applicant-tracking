@@ -31,7 +31,7 @@ function Skill() {
   };
 
   return (
-    <div>
+    <div className="content-wrapper p-3">
       {isFormOpen ? (
         <div>
           <h2 className="header">Add Skill</h2>

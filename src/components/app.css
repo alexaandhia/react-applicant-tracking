@@ -2,7 +2,9 @@
     margin-top: 60px;
 }
 
-
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 .data{
     margin-top: 15px;
 }
@@ -14,3 +16,25 @@ thead tr th{
 .ui.inverted.dimmer{
     background-color: rgba(255, 255, 255, 0) !important;
 }
+
+/* style.css */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pagination a {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: #333;
+    position: static;
+    bottom: 50px;
+  }
+  
+  .pagination a.active {
+    background-color: #007bff;
+    color: #fff;
+  }

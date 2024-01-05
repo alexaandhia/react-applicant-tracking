@@ -1,27 +1,30 @@
-import React, {useState} from 'react';
-import Form from './Form';
-import Applicants from './Applicants';
-import AddButton from './AddButton';
-import Loader from './Loader';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import "./app.css";
+import Header from './Header';
+import Footer from './Footer';
+import SideNav from './SideNav';
+import Home from './Home';
+import FormAdd from './FormAdd';
+import Applicants from './Applicants';
+import Skill from './Skill';
+
 function App() {
-
-
   return (
-    <div className="App">
-      <div className="ui fixed inverted menu">
-          <div className="ui container">
-            <a href="/#" className="header item">
-              Applicant Tracking
-            </a>
-          </div> 
-        </div>
-        <div className="ui main container">
-        <AddButton/>
-        <Applicants/>
-        </div>
+    <div className="wrapper">
+      <Header/>
+      <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/create" element={<FormAdd />} />
+          <Route path="/data" element={<Applicants />} />
+          <Route path="/skill" element={<Skill />} />
+       </Routes>
+      <SideNav/>
+      <Footer/>
+      
       
     </div>
   );
 }
+
 export default App;
